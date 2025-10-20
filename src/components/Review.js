@@ -19,7 +19,7 @@ const Review = ({ reviews }) => {
   }
 
   return (
-    <div
+    <article
       className="review"
       style={{ width: "clamp(200px, 100%, 500px)", margin: "auto" }}
     >
@@ -34,16 +34,18 @@ const Review = ({ reviews }) => {
         className="person-img"
       />
       <p className="info">{text}</p>
-      <button className="prev-btn" onClick={handlePrev}>
-        previous
-      </button>
-      <button className="next-btn" onClick={handleNext}>
-        next
-      </button>
+      <div className="button-container">
+        <button className="prev-btn" onClick={handlePrev}>
+            previous
+        </button>
+        <button className="next-btn" onClick={handleNext}>
+            next
+        </button>
+      </div>
       <button className="random-btn" onClick={supriseMe}>
         surprise me
       </button>
-    </div>
+    </article>
   );
 };
 
