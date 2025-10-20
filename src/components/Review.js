@@ -21,14 +21,15 @@ const Review = ({ reviews }) => {
   return (
     <div>
       <div className="review" style={{ width: "clamp(200px, 100%, 500px)", margin: "auto" }}>
-        <h1 id={`author-${id}`}>{author}</h1>
-        <p>{job}</p>
+        <h1 id={`author-${id}`} className="author">{author}</h1>
+        <p className="job">{job}</p>
         <img
           style={{ width: "100%", height: "500px", objectFit: "cover" }}
           src={image}
           alt="image"
+          className="person-img"
         />
-        <p>{text}</p>
+        <p className="info">{text}</p>
         <button className="prev-btn" onClick={handlePrev}>
             previous
         </button>
